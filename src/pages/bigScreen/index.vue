@@ -4,15 +4,14 @@
       <div class="title">晋控煤业四台矿智慧党建平台</div>
       <div class="buttonArray">
         <span>
-          <button>基层党建</button>
-        <button>干部风采</button>
-        <button>主题教育</button>
-        <button>集体经济</button>
-        <button>服务管理</button>
+            <router-link v-for="(button,index) in buttonArray" :key="index" :to=button.path>
+                      {{ button.buttonText }}
+            </router-link>
         </span>
       </div>
     </div>
     <main>
+      <router-view/>
     </main>
   </div>
 </template>
@@ -24,7 +23,12 @@ export default {
   name: 'bigScreen',
   data() {
     return {
-      headerUrl: header
+      headerUrl: header,
+      buttonArray: [{path: '/grassrootsPartyBuilding', buttonText: '基层党建'},
+        {path: '/cadreStyle', buttonText: '干部风采'},
+        {path: '/themeEducation', buttonText: '主题教育'},
+        {path: '/collectiveEconomy', buttonText: '集体经济'},
+        {path: '/serviceManagement', buttonText: '服务管理'}]
     }
   },
   mounted() {
@@ -63,26 +67,31 @@ export default {
       margin-top: px(10);
       margin-bottom: px(16);
     }
+
     .buttonArray {
       display: flex;
       align-items: center;
       justify-content: center;
 
       span {
-        button {
+        a {
           padding: px(10) px(15);
-          background: lighten(#a91215,2%);
+          background: lighten(#a91215, 2%);
           color: #e1a368;
           border-radius: px(3);
           font-size: px(12);
           font-weight: 800;
 
           &:hover {
+            background: linear-gradient(0deg,lighten(#8f1c1b, 10%), #8f1c1b)
+          }
+
+          &.router-link-active {
             background: linear-gradient(0deg, lighten(#8f1c1b, 1%), lighten(#8f1c1b, 10%), #8f1c1b)
           }
         }
 
-        button + button {
+        a + a {
           margin-left: px(18);
         }
       }
