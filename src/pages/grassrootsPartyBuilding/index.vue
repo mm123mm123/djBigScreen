@@ -4,7 +4,9 @@
 			<section>
 				<Djfc></Djfc>
 			</section>
-			<section></section>
+			<section>
+				<GenderStructure/>
+			</section>
 			<section></section>
 		</section>
 		<section class="box2">
@@ -21,10 +23,11 @@
 </template>
 <script>
 import Djfc from "./components/Djfc.vue";
+import GenderStructure from "./components/GenderStructure.vue";
 
 export default {
 	name: "grassrootsPartyBuilding",
-	components: {Djfc},
+	components: {Djfc, GenderStructure},
 	data() {
 		return {};
 	},
@@ -38,6 +41,7 @@ export default {
 	display: grid;
 	height: 100%;
 	grid-template-columns: 25% 50% 25%;
+	color: #f2d48f;
 
 	> section + section {
 		margin-left: px(8);

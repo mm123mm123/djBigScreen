@@ -15,7 +15,8 @@ export default {
 @import "src/helper";
 
 .cardTitle {
-	font-size: px(12);
-	color:#f2d48f
+	font-size: px(14);
+	color: #f2d48f;
+	font-weight: 800;
 }
 </style>

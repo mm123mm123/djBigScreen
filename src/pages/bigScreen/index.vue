@@ -76,11 +76,11 @@ export default {
 
 			span {
 				a {
-					padding: px(10) px(15);
+					padding: px(8) px(12);
 					background: lighten(#a91215, 2%);
 					color: #e1a368;
 					border-radius: px(3);
-					font-size: px(12);
+					font-size: px(14);
 					font-weight: 800;
 
 					&:hover {
