@@ -27,7 +27,7 @@ export default {
 					color: "#f2d48f",
 					fontSize:px(8)
 				},
-				nameGap:6,
+				axisNameGap:px(2),
 				indicator: [
 					{name: "30岁以下", max: 50000},
 					{name: "30-40岁", max: 50000},

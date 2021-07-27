@@ -12,7 +12,9 @@
 			</section>
 		</section>
 		<section class="box2">
-			<section></section>
+			<section>
+				<BasicSitch/>
+			</section>
 			<section></section>
 			<section></section>
 		</section>
@@ -27,10 +29,11 @@
 import Djfc from "./components/Djfc.vue";
 import GenderStructure from "./components/GenderStructure.vue";
 import STRCharts from "./components/STRCharts.vue";
+import BasicSitch from "./components/BasicSitch.vue";
 
 export default {
 	name: "grassrootsPartyBuilding",
-	components: {Djfc, GenderStructure,STRCharts},
+	components: {Djfc, GenderStructure,STRCharts,BasicSitch},
 	data() {
 		return {};
 	},

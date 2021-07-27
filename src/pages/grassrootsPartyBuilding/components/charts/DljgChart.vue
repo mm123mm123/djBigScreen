@@ -38,7 +38,7 @@ export default {
 			},
 			series: [
 				{
-					name: '访问来源',
+					name: '党龄结构',
 					type: 'pie',
 					radius: '62%',
 					center: [px(33), px(50)],
