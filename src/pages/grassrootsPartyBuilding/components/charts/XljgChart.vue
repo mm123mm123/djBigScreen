@@ -1,5 +1,5 @@
 <template>
-	<div class="dljgChartBox" ref="xljgChartBox"></div>
+	<div class="nljgChartBox" ref="xljgChartBox"></div>
 </template>
 <script>
 import * as echarts from "echarts";
@@ -25,8 +25,11 @@ export default {
 			},
 
 			legend: {
-				top: "10%",
-				left: "62%",
+				top: px(16),
+				right: px(6),
+				itemGap:px(4),
+				orient:'vertical',
+				align:'left',
 				textStyle: {
 					color: "#f2d48f",
 					fontSize: px(9)
@@ -36,9 +39,9 @@ export default {
 				{
 					name: "学历结构",
 					type: "pie",
-					radius: ["55%", "70%"],
+					radius: ["50%", "65%"],
 					avoidLabelOverlap: false,
-					center: ["30%", "46%"],
+					center: [px(34), px(50)],
 					label: {
 						show: false,
 						position: "center"
@@ -73,7 +76,7 @@ export default {
 <style lang="scss" scoped>
 @import "src/helper";
 
-.dljgChartBox {
+.nljgChartBox {
 	height: 100%;
 }
 </style>

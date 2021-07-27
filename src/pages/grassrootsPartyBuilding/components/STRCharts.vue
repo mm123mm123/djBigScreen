@@ -20,7 +20,9 @@
 		</section>
 		<section>
 			<div class="cardTitle" ref="cardTitle">年龄结构</div>
-			<div class="chartContainer" ref="chartContainer4"></div>
+			<div class="chartContainer">
+				<NljgChart/>
+			</div>
 		</section>
 	</div>
 </template>
@@ -28,10 +30,11 @@
 import XljgChart from "./charts/XljgChart.vue";
 import HyjgChart from "./charts/HyjgChart.vue";
 import DljgChart from "./charts/DljgChart.vue";
+import NljgChart from "./charts/NljgChart.vue";
 
 export default {
 	name: "GenderStructure",
-	components: {XljgChart,HyjgChart,DljgChart},
+	components: {XljgChart, HyjgChart, DljgChart, NljgChart},
 	data() {
 		return {
 			percentage: 70,

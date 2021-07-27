@@ -23,8 +23,11 @@ export default {
 				"#dc652a"
 			],
 			legend: {
-				top: "10%",
-				left: "54%",
+				top: px(16),
+				right: px(2),
+				itemGap:px(4),
+				orient:'vertical',
+				align:'left',
 				textStyle: {
 					color: "#f2d48f",
 					fontSize: px(9)
@@ -43,8 +46,8 @@ export default {
 				{
 					name: '面积模式',
 					type: 'pie',
-					radius: [10, 60],
-					center: ['24%', '50%'],
+					radius: [px(6), px(36)],
+					center: [px(31), px(50)],
 					roseType: 'area',
 					itemStyle: {
 						borderRadius: 8
