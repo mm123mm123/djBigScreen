@@ -1,5 +1,5 @@
 <template>
-	<div class="xljgChartBox" ref="xljgChartBox"></div>
+	<div class="dljgChartBox" ref="xljgChartBox"></div>
 </template>
 <script>
 import * as echarts from "echarts";
@@ -73,7 +73,7 @@ export default {
 <style lang="scss" scoped>
 @import "src/helper";
 
-.xljgChartBox {
+.dljgChartBox {
 	height: 100%;
 }
 </style>

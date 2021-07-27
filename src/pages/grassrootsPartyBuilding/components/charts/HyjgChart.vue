@@ -53,7 +53,7 @@ export default {
 						show:false,
 					},
 					data: [
-						{value: 40, name: '机关事业单位'},
+						{value: 40, name: '机关单位'},
 						{value: 38, name: '生产单位'},
 						{value: 32, name: '辅助单位'},
 						{value: 30, name: '退休党员'},
