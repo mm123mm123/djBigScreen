@@ -31,17 +31,18 @@ export default {
 				{path: "/serviceManagement", buttonText: "服务管理"}]
 		};
 	},
+	created() {
+		window.clientWidth = document.documentElement.clientWidth;
+		window.clientHeight = document.documentElement.clientHeight;
+		window.pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * 16 / 9 : clientWidth;
+	},
 	mounted() {
-		const clientWidth = document.documentElement.clientWidth;
-		const clientHeight = document.documentElement.clientHeight;
-		const pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * 16 / 9 : clientWidth;
 		const pageHeight = pageWidth / (16 / 9);
 		document.getElementsByTagName("html")[0].style["font-size"] = pageWidth / 100 + "px";
 		const root = document.querySelector("#root");
 		root.style.width = pageWidth + "px";
 		root.style.height = pageHeight + "px";
 		root.style.marginTop = (clientHeight - pageHeight) / 2 + "px";
-		console.log(header);
 	}
 };
 </script>

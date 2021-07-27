@@ -7,7 +7,9 @@
 			<section>
 				<GenderStructure/>
 			</section>
-			<section></section>
+			<section>
+				<STRCharts/>
+			</section>
 		</section>
 		<section class="box2">
 			<section></section>
@@ -24,10 +26,11 @@
 <script>
 import Djfc from "./components/Djfc.vue";
 import GenderStructure from "./components/GenderStructure.vue";
+import STRCharts from "./components/STRCharts.vue";
 
 export default {
 	name: "grassrootsPartyBuilding",
-	components: {Djfc, GenderStructure},
+	components: {Djfc, GenderStructure,STRCharts},
 	data() {
 		return {};
 	},
