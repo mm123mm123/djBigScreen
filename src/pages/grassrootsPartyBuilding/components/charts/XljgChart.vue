@@ -25,7 +25,7 @@ export default {
 			},
 
 			legend: {
-				top: "16%",
+				top: "10%",
 				left: "62%",
 				textStyle: {
 					color: "#f2d48f",
@@ -38,7 +38,7 @@ export default {
 					type: "pie",
 					radius: ["55%", "70%"],
 					avoidLabelOverlap: false,
-					center: ["30%", "50%"],
+					center: ["30%", "46%"],
 					label: {
 						show: false,
 						position: "center"

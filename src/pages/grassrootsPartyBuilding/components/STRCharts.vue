@@ -3,12 +3,14 @@
 		<section>
 			<div class="cardTitle" ref="cardTitle">学历结构</div>
 			<div class="chartContainer">
-				<xljgChart/>
+				<XljgChart/>
 			</div>
 		</section>
 		<section>
 			<div class="cardTitle" ref="cardTitle">行业结构</div>
-			<div class="chartContainer" ref="chartContainer2"></div>
+			<div class="chartContainer">
+				<HyjgChart/>
+			</div>
 		</section>
 		<section>
 			<div class="cardTitle" ref="cardTitle">党龄结构</div>
@@ -21,11 +23,12 @@
 	</div>
 </template>
 <script>
-import xljgChart from "./charts/xljgChart.vue";
+import XljgChart from "./charts/XljgChart.vue";
+import HyjgChart from "./charts/HyjgChart.vue";
 
 export default {
 	name: "GenderStructure",
-	components: {xljgChart},
+	components: {XljgChart,HyjgChart},
 	data() {
 		return {
 			percentage: 70,
