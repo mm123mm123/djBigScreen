@@ -33,12 +33,12 @@ export default {
 	data() {
 		return {
 			sitchArray:[
-				{title:'正式党员',number:5000},
-				{title:'预备党员',number:300},
-				{title:'发展党员',number:3000},
-				{title:'流动党员',number:1000},
-				{title:'基层党组织',number:200},
-				{title:'军队退役党员',number:3000},
+				{title:'正式党员',number:3260},
+				{title:'预备党员',number:310},
+				{title:'发展党员',number:3120},
+				{title:'流动党员',number:1560},
+				{title:'基层党组织',number:213},
+				{title:'军队退役党员',number:3200},
 			]
 		};
 	},

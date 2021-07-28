@@ -3,7 +3,7 @@
 		<img src="src/assets/images/Danghui_golden.png">
 		<div>
 			<div class="centerBoxTitle">党员总数</div>
-			<div class="centerBoxNumber"><strong>5   0   0   0</strong>   人</div>
+			<div class="centerBoxNumber"><strong>5   2   6   0</strong>   人</div>
 		</div>
 	</div>
 </template>

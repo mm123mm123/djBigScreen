@@ -1,28 +1,25 @@
 <template>
 	<div class="STRCharts">
 		<section>
-			<div class="cardTitle" ref="cardTitle">学历结构</div>
+			<div class="cardTitle">学历结构</div>
 			<div class="chartContainer">
 				<XljgChart/>
 			</div>
 		</section>
 		<section>
-			<div class="cardTitle" ref="cardTitle">行业结构</div>
+			<div class="cardTitle">行业结构</div>
 			<div class="chartContainer">
 				<HyjgChart/>
 			</div>
 		</section>
 		<section>
-			<div class="cardTitle" ref="cardTitle">党龄结构</div>
+			<div class="cardTitle">党龄结构</div>
 			<div class="chartContainer">
 				<DljgChart/>
 			</div>
 		</section>
 		<section>
-			<div class="cardTitle" ref="cardTitle">年龄结构</div>
-			<div class="chartContainer">
-				<NljgChart/>
-			</div>
+			<NljgChart/>
 		</section>
 	</div>
 </template>
@@ -40,8 +37,11 @@ export default {
 			percentage: 70,
 			percentage2: 30,
 			customColor: "#f2d48f",
+			titleHeight: 0
 		};
 	},
+	mounted() {
+	}
 };
 
 </script>

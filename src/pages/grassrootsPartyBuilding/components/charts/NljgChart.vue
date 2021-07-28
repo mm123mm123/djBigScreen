@@ -1,5 +1,8 @@
 <template>
-	<div class="nljgChartBox" ref="nljgChartBox"></div>
+	<div class="nljgChartContainer" ref="nljgChartContainer">
+		<div class="cardTitle" ref="cardTitle">年龄结构</div>
+		<div class="nljgChartBox" ref="nljgChartBox"></div>
+	</div>
 </template>
 <script>
 import * as echarts from "echarts";
@@ -13,6 +16,7 @@ export default {
 	mounted() {
 		const chartDom = this.$refs.nljgChartBox;
 		const myChart = echarts.init(chartDom);
+		// myChart.resize({height: this.$refs.nljgChartContainer.clientHeight - this.$refs.cardTitle});
 		let option;
 
 		option = {
@@ -25,9 +29,9 @@ export default {
 				axisName: {
 					show: true,
 					color: "#f2d48f",
-					fontSize:px(8)
+					fontSize: px(8)
 				},
-				axisNameGap:px(2),
+				axisNameGap: px(2),
 				indicator: [
 					{name: "30岁以下", max: 50000},
 					{name: "30-40岁", max: 50000},
@@ -58,8 +62,16 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "src/helper";
-
-.nljgChartBox {
+.nljgChartContainer{
+	display: flex;
+	flex-direction: column;
 	height: 100%;
+	.cardTitle {
+		font-size: px(12);
+	}
+	.nljgChartBox {
+		flex-grow: 1;
+	}
 }
+
 </style>

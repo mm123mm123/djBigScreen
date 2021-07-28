@@ -18,7 +18,9 @@
 			<section>
 				<CenterPic/>
 			</section>
-			<section></section>
+			<section id="feePaymentSec">
+				<FeePayment :sec-height="feePaymentHeight"/>
+			</section>
 		</section>
 		<section class="box3">
 			<section></section>
@@ -33,13 +35,26 @@ import GenderStructure from "./components/GenderStructure.vue";
 import STRCharts from "./components/STRCharts.vue";
 import BasicSitch from "./components/BasicSitch.vue";
 import CenterPic from "./components/CenterPic.vue";
+import FeePayment from "./components/FeePayment.vue";
 
 export default {
 	name: "grassrootsPartyBuilding",
-	components: {Djfc, GenderStructure,STRCharts,BasicSitch,CenterPic},
+	components: {Djfc, GenderStructure, STRCharts, BasicSitch, CenterPic, FeePayment},
 	data() {
-		return {};
+		return {
+			feePaymentHeight: 0
+		};
 	},
+	methods:{
+		getHeight(element){
+			this.$nextTick(()=>{
+			})
+		}
+	},
+	mounted() {
+		this.feePaymentHeight = document.getElementById("feePaymentSec").clientHeight;
+		this.getHeight(document.getElementById("feePaymentSec"))
+	}
 };
 
 </script>
