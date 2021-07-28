@@ -36,6 +36,12 @@ export default {
 						}
 					}
 				},
+				grid: {
+					x: px(25),
+					y: px(10),
+					x2: px(25),
+					y2: px(20)
+				},
 				legend: {
 					itemGap: px(4),
 					textStyle: {
@@ -52,7 +58,13 @@ export default {
 						},
 						axisLabel: {
 							fontSize: px(10.5),
-							color: "#f2d48f"
+							color: "#f2d48f",
+						},
+						axisLine: {
+							show: false
+						},
+						axisTick: {
+							show: false
 						}
 					}
 				],
@@ -63,10 +75,12 @@ export default {
 						max: 1600,
 						interval: 400,
 						axisLabel: {
-							formatter: "{value} ",
 							fontSize: px(10.5),
 							color: "#f2d48f",
-							interval: 4
+							interval: 4,
+							formatter: (para) => {
+								return para < 1000 ? para : para / 1000 + "k";
+							},
 						},
 						splitLine: {
 							show: false
@@ -78,7 +92,6 @@ export default {
 						max: 1600,
 						interval: 200,
 						axisLabel: {
-							formatter: "{value}",
 							fontSize: px(10),
 							color: "#f2d48f",
 						},

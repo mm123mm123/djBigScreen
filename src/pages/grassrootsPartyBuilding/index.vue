@@ -29,7 +29,9 @@
 			<section>
 				<DevCCP/>
 			</section>
-			<section></section>
+			<section>
+				<OrganizeEvent/>
+			</section>
 		</section>
 	</div>
 </template>
@@ -42,10 +44,11 @@ import CenterPic from "./components/CenterPic.vue";
 import FeePayment from "./components/FeePayment.vue";
 import CCPBDay from "./components/CCPBDay.vue";
 import DevCCP from "./components/DevCCP.vue";
+import OrganizeEvent from "./components/OrganizeEvent.vue";
 
 export default {
 	name: "grassrootsPartyBuilding",
-	components: {Djfc, GenderStructure, STRCharts, BasicSitch, CenterPic, FeePayment,CCPBDay,DevCCP},
+	components: {Djfc, GenderStructure, STRCharts, BasicSitch, CenterPic, FeePayment, CCPBDay, DevCCP, OrganizeEvent},
 	data() {
 		return {
 			feePaymentHeight: 0
@@ -78,7 +81,7 @@ export default {
 	}
 
 	section {
-		border: 1px solid blue;
+		//border: 1px solid blue;
 	}
 
 	.box1 {
@@ -102,7 +105,8 @@ export default {
 	.box3 {
 		display: grid;
 		grid-template-rows: 30% 29% 41%;
-		section{
+
+		section {
 			padding-right: px(16);
 		}
 	}

@@ -6,6 +6,7 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@jiaminghi/data-view": "^2.10.0",
     "echarts": "^5.1.2",
     "element-plus": "^1.0.2-beta.62",
     "vue": "^3.0.4",
