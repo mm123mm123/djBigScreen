@@ -90,7 +90,7 @@ export default {
 
 	.box2 {
 		display: grid;
-		grid-template-rows: 20% 46% 34%;
+		grid-template-rows: 20% 40% 40%;
 	}
 
 	.box3 {

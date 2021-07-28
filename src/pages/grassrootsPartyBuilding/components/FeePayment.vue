@@ -1,6 +1,6 @@
 <template>
 	<div class="feePaymentContainer" ref="feePaymentContainer" id="feePaymentContainer">
-				<div class="cardTitle" ref="cardTitle">党费缴纳统计</div>
+		<div class="cardTitle" ref="cardTitle">党费缴纳统计</div>
 		<div class="feePaymentChart" ref="feePaymentChart"></div>
 	</div>
 </template>
@@ -71,6 +71,9 @@ export default {
 							color: "#f2d48f",
 							interval: 4
 						},
+						splitLine: {
+							show: false
+						}
 					},
 					{
 						type: "value",
@@ -81,6 +84,9 @@ export default {
 							formatter: "{value}",
 							fontSize: px(10),
 							color: "#f2d48f",
+						},
+						splitLine: {
+							show: false
 						}
 					}
 				],
@@ -88,13 +94,26 @@ export default {
 					{
 						name: "支部缴纳统计",
 						type: "bar",
-						data: [1300, 1500, 900, 700, 500, 1000, 1200, 1400, 800, 600, 1300, 990]
+						data: [1300, 1500, 900, 700, 500, 1000, 1200, 1400, 800, 600, 1300, 990],
+						itemStyle: {
+							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+								{
+									offset: 0, color: "#e04b18"
+								},
+								{
+									offset: 1, color: "transparent"
+								}], false)
+
+						}
 					},
 					{
 						name: "党员缴纳统计",
 						type: "line",
 						yAxisIndex: 1,
-						data: [500, 900, 1200, 1500, 900, 1200, 1000, 990, 700, 1000, 1300, 1000]
+						data: [500, 900, 1200, 1500, 900, 1200, 1000, 990, 700, 1000, 1300, 1000],
+						itemStyle: {
+							color: "#fff7a5"
+						}
 					}
 				]
 			};
@@ -121,12 +140,14 @@ export default {
 	padding: 0 px(16);
 
 	.cardTitle {
-		padding: px(6) 0;
+		padding: px(4) 0;
 	}
 
 	.feePaymentChart {
 		flex-grow: 1;
 		overflow: hidden;
+		padding-bottom: px(16);
+		padding-top: px(6);
 	}
 }
 </style>
