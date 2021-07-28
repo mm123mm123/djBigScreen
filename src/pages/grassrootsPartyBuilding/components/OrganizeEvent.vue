@@ -2,11 +2,12 @@
 	<div class="eventContainer" ref="eventContainer" id="eventContainer">
 		<div class="cardTitle" ref="cardTitle">党员组织活动</div>
 		<div class="boardContainer">
-			<dv-scroll-board :config="config" style="width:100%;height:100%"/>
+			<dv-scroll-board :config="config" style="width:100%;height:96%"/>
 		</div>
 	</div>
 </template>
 <script>
+import {px} from "../../../utils/util.js";
 
 export default {
 	name: "OrganizeEvent",
@@ -27,7 +28,8 @@ export default {
 				oddRowBGC: "#a41516",
 				evenRowBGC: "#8f1c1b",
 				waitTime: 5000,
-				align:['center','center','center',]
+				align: ["center", "center", "center",],
+				headerHeight: px(22)
 			}
 		};
 	},
@@ -47,9 +49,9 @@ export default {
 	}
 
 	.boardContainer {
-		padding-bottom: px(16);
 		padding-left: px(8);
 		padding-top: px(4);
+		padding-bottom: px(6);
 		flex-grow: 1;
 
 		.dv-scroll-board {
@@ -62,7 +64,7 @@ export default {
 			}
 
 			::v-deep .rows {
-				.row-item{
+				.row-item {
 					font-size: px(10);
 					color: #f2d48f;
 				}

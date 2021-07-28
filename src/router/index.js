@@ -4,6 +4,7 @@ import cadreStyle from '../pages/cadreStyle/index.vue'
 import themeEducation from '../pages/themeEducation/index.vue'
 import collectiveEconomy from '../pages/collectiveEconomy/index.vue'
 import serviceManagement from '../pages/serviceManagement/index.vue'
+import underConstruc from "../pages/underConstruc.vue";
 const routes = [
     {
         path: '/',
@@ -15,19 +16,19 @@ const routes = [
     },
     {
         path: '/cadreStyle',
-        component: cadreStyle,
+        component: underConstruc,
     },
     {
         path: '/themeEducation',
-        component: themeEducation,
+        component: underConstruc,
     },
     {
         path: '/collectiveEconomy',
-        component: collectiveEconomy,
+        component: underConstruc,
     },
     {
         path: '/serviceManagement',
-        component: serviceManagement,
+        component: underConstruc,
     }
 ];
 

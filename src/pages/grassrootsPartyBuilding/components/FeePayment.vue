@@ -39,7 +39,7 @@ export default {
 				grid: {
 					x: px(25),
 					y: px(10),
-					x2: px(25),
+					x2: px(30),
 					y2: px(20)
 				},
 				legend: {

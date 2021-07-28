@@ -58,7 +58,6 @@ export default {
 	grid-template-columns:50% 50%;
 
 	section {
-		border: 1px solid blue;
 		display: flex;
 		flex-direction: column;
 
