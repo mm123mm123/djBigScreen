@@ -1,6 +1,6 @@
 <template>
 	<div class="pageContainer">
-		<img src="src/assets/images/construc.png" alt="">
+		<img src="/src/assets/images/construc.png" alt="">
 		<span>页面正在建设中，敬请期待...</span>
 	</div>
 </template>

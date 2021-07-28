@@ -1,7 +1,7 @@
 <template>
 	<div id="root">
 		<div class="header" :style="'background-image:'+'url('+headerUrl+')'">
-			<div class="title">智慧党建平台</div>
+			<div class="title">晋控煤业四台矿智慧党建平台</div>
 			<div class="buttonArray">
         <span>
           <router-link v-for="(button,index) in buttonArray" :key="index" :to=button.path>

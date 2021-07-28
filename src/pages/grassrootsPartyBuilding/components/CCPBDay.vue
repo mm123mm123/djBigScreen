@@ -2,7 +2,7 @@
 	<div class="birthdayBox">
 		<div class="cardTitle" ref="cardTitle">党员政治生日</div>
 		<div class="birthdayTable">
-			<img src="src/assets/images/baige.png" alt="">
+			<img src="/src/assets/images/baige.png" alt="">
 			<div>
 				<ul>
 					<li v-for="ccpBDay in ccpBDayArray.slice(0,2)">

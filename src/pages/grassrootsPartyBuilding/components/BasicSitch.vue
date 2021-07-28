@@ -5,7 +5,7 @@
 			<ul>
 				<li v-for="sitch in sitchArray.slice(0,3)">
 					<div>
-						<img src="src/assets/images/partyMember.png" class="ccpIcon"/>
+						<img src="/src/assets/images/partyMember.png" class="ccpIcon"/>
 						<span>{{sitch.title}}：<strong>{{ sitch.number }}</strong>人</span>
 					</div>
 				</li>
@@ -13,7 +13,7 @@
 			<ul>
 				<li v-for="sitch in sitchArray.slice(3)">
 					<div>
-						<img src="src/assets/images/partyMember.png" class="ccpIcon"/>
+						<img src="/src/assets/images/partyMember.png" class="ccpIcon"/>
 						<span>{{sitch.title}}：<strong>{{ sitch.number }}</strong>人</span>
 					</div>
 				</li>
