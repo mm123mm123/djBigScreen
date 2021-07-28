@@ -1,3 +1,8 @@
 @function px($n) {
   @return ($n / 1058)*100rem
 }
+
+@font-face {
+  font-family: 'digital-clock-font';
+  src: url('/src/assets/digital-7.ttf');
+}

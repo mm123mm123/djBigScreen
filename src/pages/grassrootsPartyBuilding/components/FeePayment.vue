@@ -10,9 +10,6 @@ import {px} from "../../../utils/util";
 
 export default {
 	name: "FeePayment",
-	props: {
-		secHeight: null
-	},
 	data() {
 		return {
 			percentage: 70,

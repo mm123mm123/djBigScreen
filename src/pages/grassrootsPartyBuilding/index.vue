@@ -19,11 +19,13 @@
 				<CenterPic/>
 			</section>
 			<section id="feePaymentSec">
-				<FeePayment :sec-height="feePaymentHeight"/>
+				<FeePayment/>
 			</section>
 		</section>
 		<section class="box3">
-			<section></section>
+			<section>
+				<CCPBDay/>
+			</section>
 			<section></section>
 			<section></section>
 		</section>
@@ -36,24 +38,25 @@ import STRCharts from "./components/STRCharts.vue";
 import BasicSitch from "./components/BasicSitch.vue";
 import CenterPic from "./components/CenterPic.vue";
 import FeePayment from "./components/FeePayment.vue";
+import CCPBDay from "./components/CCPBDay.vue";
 
 export default {
 	name: "grassrootsPartyBuilding",
-	components: {Djfc, GenderStructure, STRCharts, BasicSitch, CenterPic, FeePayment},
+	components: {Djfc, GenderStructure, STRCharts, BasicSitch, CenterPic, FeePayment,CCPBDay},
 	data() {
 		return {
 			feePaymentHeight: 0
 		};
 	},
-	methods:{
-		getHeight(element){
-			this.$nextTick(()=>{
-			})
+	methods: {
+		getHeight(element) {
+			this.$nextTick(() => {
+			});
 		}
 	},
 	mounted() {
 		this.feePaymentHeight = document.getElementById("feePaymentSec").clientHeight;
-		this.getHeight(document.getElementById("feePaymentSec"))
+		this.getHeight(document.getElementById("feePaymentSec"));
 	}
 };
 
@@ -95,7 +98,7 @@ export default {
 
 	.box3 {
 		display: grid;
-		grid-template-rows: 25% 29% 46%;
+		grid-template-rows: 30% 29% 41%;
 	}
 
 }
