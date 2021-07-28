@@ -19,7 +19,10 @@
 			</div>
 		</section>
 		<section>
-			<NljgChart/>
+			<div class="cardTitle" ref="cardTitle">年龄结构</div>
+			<div class="chartContainer">
+				<NljgChart/>
+			</div>
 		</section>
 	</div>
 </template>

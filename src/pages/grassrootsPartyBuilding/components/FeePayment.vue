@@ -1,6 +1,6 @@
 <template>
 	<div class="feePaymentContainer" ref="feePaymentContainer" id="feePaymentContainer">
-		<div class="cardTitle" ref="cardTitle">党费缴纳统计</div>
+				<div class="cardTitle" ref="cardTitle">党费缴纳统计</div>
 		<div class="feePaymentChart" ref="feePaymentChart"></div>
 	</div>
 </template>
@@ -23,95 +23,90 @@ export default {
 			containerDom: {}
 		};
 	},
-	mounted() {
-		// console.log(this.secHeight);
-		// const containerHeight = this.$refs.feePaymentContainer.clientHeight;
-		// console.log(document.getElementById("feePaymentContainer"));
-		// console.log(document.getElementById("feePaymentContainer").clientHeight);
-		// const titleHeight = this.$refs.cardTitle.clientHeight;
-		// console.log(containerHeight);
-		// console.log(titleHeight);
-		this.containerDom=this.$refs.feePaymentContainer
-		console.log(this.containerDom);
-		console.log(this.containerDom.clientHeight);
-		this.chartDom = this.$refs.feePaymentChart;
-		this.myChart = echarts.init(this.chartDom);
-		// console.log(containerHeight);
-		// myChart.resize({height:(containerHeight -titleHeight) })
-		let option;
+	methods: {
+		setChart() {
+			this.chartDom = this.$refs.feePaymentChart;
+			this.myChart = echarts.init(this.chartDom);
+			let option;
 
-		option = {
-			tooltip: {
-				trigger: "axis",
-				axisPointer: {
-					type: "cross",
-					crossStyle: {
-						color: "#999"
-					}
-				}
-			},
-			legend: {
-				itemGap: px(4),
-				textStyle: {
-					color: "#f2d48f",
-					fontSize: px(9.5)
-				}
-			},
-			xAxis: [
-				{
-					type: "category",
-					data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+			option = {
+				tooltip: {
+					trigger: "axis",
 					axisPointer: {
-						type: "shadow"
-					},
-					axisLabel: {
-						fontSize: px(10.5),
-						color: "#f2d48f"
+						type: "cross",
+						crossStyle: {
+							color: "#999"
+						}
 					}
-				}
-			],
-			yAxis: [
-				{
-					type: "value",
-					min: 0,
-					max: 1600,
-					interval: 400,
-					axisLabel: {
-						formatter: "{value} ",
-						fontSize: px(10.5),
-						color: "#f2d48f",
-						interval: 4
-					},
 				},
-				{
-					type: "value",
-					min: 0,
-					max: 1600,
-					interval: 200,
-					axisLabel: {
-						formatter: "{value}",
-						fontSize: px(10),
+				legend: {
+					itemGap: px(4),
+					textStyle: {
 						color: "#f2d48f",
+						fontSize: px(9.5)
 					}
-				}
-			],
-			series: [
-				{
-					name: "支部缴纳统计",
-					type: "bar",
-					data: [1300, 1500, 900, 700, 500, 1000, 1200, 1400, 800, 600, 1300, 990]
 				},
-				{
-					name: "党员缴纳统计",
-					type: "line",
-					yAxisIndex: 1,
-					data: [500, 900, 1200, 1500, 900, 1200, 1000, 990, 700, 1000, 1300, 1000]
-				}
-			]
-		};
+				xAxis: [
+					{
+						type: "category",
+						data: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+						axisPointer: {
+							type: "shadow"
+						},
+						axisLabel: {
+							fontSize: px(10.5),
+							color: "#f2d48f"
+						}
+					}
+				],
+				yAxis: [
+					{
+						type: "value",
+						min: 0,
+						max: 1600,
+						interval: 400,
+						axisLabel: {
+							formatter: "{value} ",
+							fontSize: px(10.5),
+							color: "#f2d48f",
+							interval: 4
+						},
+					},
+					{
+						type: "value",
+						min: 0,
+						max: 1600,
+						interval: 200,
+						axisLabel: {
+							formatter: "{value}",
+							fontSize: px(10),
+							color: "#f2d48f",
+						}
+					}
+				],
+				series: [
+					{
+						name: "支部缴纳统计",
+						type: "bar",
+						data: [1300, 1500, 900, 700, 500, 1000, 1200, 1400, 800, 600, 1300, 990]
+					},
+					{
+						name: "党员缴纳统计",
+						type: "line",
+						yAxisIndex: 1,
+						data: [500, 900, 1200, 1500, 900, 1200, 1000, 990, 700, 1000, 1300, 1000]
+					}
+				]
+			};
 
-		option && this.myChart.setOption(option);
-
+			option && this.myChart.setOption(option);
+		}
+	},
+	mounted() {
+		this.containerDom = this.$refs.feePaymentContainer;
+		setTimeout(() => {
+			this.setChart();
+		});
 	}
 };
 
